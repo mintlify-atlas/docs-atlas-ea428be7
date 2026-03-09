@@ -1,0 +1,150 @@
+{
+  "projectType": "saas",
+  "projectName": "Chronos-DFIR",
+  "projectDescription": "Advanced Digital Forensics & Incident Response platform for timeline analysis, multi-format evidence ingestion, and threat detection.",
+  "theme": "aspen",
+  "primaryColor": "#3b82f6",
+  "lightColor": "#60a5fa",
+  "darkColor": "#1e40af",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/evidence-ingestion",
+              "features/timeline-analysis",
+              "features/detection-engine",
+              "features/exports-reports"
+            ]
+          },
+          {
+            "group": "User Interface",
+            "pages": [
+              "ui/drag-and-drop",
+              "ui/timeline-grid",
+              "ui/filters-search",
+              "ui/visualization"
+            ]
+          },
+          {
+            "group": "Detection & Analysis",
+            "pages": [
+              "detection/sigma-rules",
+              "detection/yara-rules",
+              "detection/mitre-attack",
+              "detection/risk-scoring"
+            ]
+          },
+          {
+            "group": "Supported Formats",
+            "pages": [
+              "formats/overview",
+              "formats/windows-artifacts",
+              "formats/macos-artifacts",
+              "formats/linux-artifacts",
+              "formats/generic-formats"
+            ]
+          },
+          {
+            "group": "Case Management",
+            "pages": [
+              "cases/overview",
+              "cases/creating-cases",
+              "cases/multi-file-analysis",
+              "cases/journal-notes"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api/overview",
+              "api/upload",
+              "api/analysis",
+              "api/export",
+              "api/cases"
+            ]
+          },
+          {
+            "group": "Engine Modules",
+            "pages": [
+              "api/forensic-engine",
+              "api/sigma-engine",
+              "api/ingestor",
+              "api/analyzer"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Advanced",
+        "groups": [
+          {
+            "group": "Architecture",
+            "pages": [
+              "advanced/architecture",
+              "advanced/data-pipeline",
+              "advanced/skill-system",
+              "advanced/multi-agent-workflow"
+            ]
+          },
+          {
+            "group": "Development",
+            "pages": [
+              "advanced/contributing",
+              "advanced/testing",
+              "advanced/extending-detection"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Multi-format evidence ingestion (EVTX, MFT, CSV, JSON, Plist, SQLite, Parquet)",
+    "Interactive timeline visualization with filtering and correlation",
+    "86+ Sigma rules and 7 YARA rules for threat detection",
+    "MITRE ATT&CK framework integration for TTP mapping",
+    "Real-time risk scoring and anomaly detection",
+    "Comprehensive export capabilities (CSV, Excel, JSON, HTML, PDF)",
+    "Case management with DuckDB persistence",
+    "Streaming architecture for processing large datasets (6GB+)",
+    "Offline-first design with zero external dependencies for analysis",
+    "Professional dark mode interface optimized for data analysis"
+  ],
+  "publicApiSurface": [
+    "POST /api/upload - Stream upload forensic artifacts",
+    "POST /api/process - Parse and normalize evidence files",
+    "GET /api/data/{filename} - Retrieve paginated timeline data",
+    "POST /api/forensic_report - Generate comprehensive forensic analysis",
+    "GET /api/histogram/{filename} - Get time-series histogram data",
+    "POST /api/export_filtered - Export filtered timeline data",
+    "GET /api/export/html - Generate standalone HTML report",
+    "GET /api/export/pdf - Generate PDF forensic report",
+    "POST /api/reset - Hard reset session state",
+    "POST /api/cases - Create investigation case",
+    "GET /api/cases/{case_id} - Retrieve case details",
+    "engine.forensic.sub_analyze_timeline() - Timeline analysis",
+    "engine.forensic.sub_analyze_context() - IoC extraction",
+    "engine.forensic.calculate_smart_risk_m4() - Risk scoring",
+    "engine.sigma_engine.load_sigma_rules() - Load detection rules",
+    "engine.sigma_engine.match_sigma_rules() - Evaluate rules against data",
+    "engine.ingestor.ingest_file() - Multi-format file parsing",
+    "engine.analyzer.analyze_dataframe() - Statistical analysis"
+  ]
+}
